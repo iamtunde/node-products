@@ -11,8 +11,8 @@ exports.create = (req, res, next) => {
             return res.status(422).json({
                 message: err.message
             })
+        } else {
+            next();
         }
     })
-
-    next();
 }
